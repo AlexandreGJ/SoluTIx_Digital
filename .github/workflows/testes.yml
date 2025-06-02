@@ -31,4 +31,4 @@ jobs:
       # Certifique-se de que 'testar_despesas.py' e 'despesas_gerenciamento.py'
       # estejam na raiz do seu repositório ou no caminho correto.
       - name: Executar o teste automático
-        run: python testar_despesas.py # Aqui mudamos para o nome do nosso arquivo de teste
+        run: python teste.py # Aqui mudamos para o nome do nosso arquivo de teste
