@@ -1,0 +1,34 @@
+# Nome do workflow que aparecerá na aba "Actions" do GitHub
+name: Testar Despesas
+
+# Define quando o workflow será executado
+on:
+  # Executa quando houver um push (alteração de código) na branch principal
+  push:
+    branches: [ main ]
+  # Também executa se alguém abrir um pull request na branch main
+  pull_request:
+    branches: [ main ]
+
+# Define os trabalhos (jobs) que serão executados
+jobs:
+  test: # Mantive o nome 'test' como no seu exemplo
+    # Ambiente onde o teste será executado (um servidor Linux Ubuntu na nuvem)
+    runs-on: ubuntu-latest
+
+    steps:
+      # Etapa 1: Baixar o conteúdo do repositório para o ambiente de teste
+      - name: Baixar o código do repositório
+        uses: actions/checkout@v3
+
+      # Etapa 2: Instalar o Python 3.10 no ambiente de teste
+      - name: Configurar o ambiente com Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      # Etapa 3: Rodar o arquivo de teste (testar_despesas.py)
+      # Certifique-se de que 'testar_despesas.py' e 'despesas_gerenciamento.py'
+      # estejam na raiz do seu repositório ou no caminho correto.
+      - name: Executar o teste automático
+        run: python testar_despesas.py # Aqui mudamos para o nome do nosso arquivo de teste
