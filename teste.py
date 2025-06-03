@@ -1,7 +1,7 @@
 # testar_despesas.py
 
 # Importa a função de cálculo e os dados de despesas do arquivo 'despesas_gerenciamento.py'
-from despesas_gerenciamento import calcular_total_despesas, despesas_mensais
+from codigo import calcular_total_despesas, despesas_mensais
 
 # Importa a biblioteca 'sys', que permite encerrar o programa com códigos de erro
 # Isso é importante para o GitHub Actions identificar falhas
