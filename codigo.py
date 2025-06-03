@@ -1,5 +1,5 @@
 # Lista com os valores das despesas realizadas em diferentes categorias do mês
-despesas_mensais = [150, 45, 120, 10, 10]
+despesas_mensais = [150, 45, 120, 10, 150]
 
 # Função que recebe uma lista de valores e retorna a soma total
 def calcular_total_despesas(valores_despesas):
